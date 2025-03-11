@@ -7,7 +7,7 @@ export default async function About({params}: {params: Promise<{id: string}>}) {
     
     return (
         <div>
-            <form>
+            <form action="/api/answer" method="POST">
                 <input type="hidden" name="questionId" value={id} />
                 <div className={styles.componentWrapper}>
                     <QuestionInput fe_id="c1" props={{title: '你的姓名',placeholder: "请输入内容"}}/>
