@@ -1,0 +1,14 @@
+.list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.verticalItem {
+    margin-bottom: 10px;
+    // ul和li的排列方式就是垂直排列，所以只需要设置margin-bottom即可
+}
+
+.horizontalItem {
+    display: inline-block;
+    margin-right: 10px;
+}
