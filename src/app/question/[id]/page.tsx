@@ -1,12 +1,13 @@
 import QuestionInput from "@/components/QuestionComponents/QuestionInput";
 import QuestionRadio from "@/components/QuestionComponents/QuestionRadio";
 import styles from "./page.module.scss";
+import PageWrapper from "@/components/PageWrapper";
 
 export default async function About({params}: {params: Promise<{id: string}>}) {
     const { id } = await params;
     
     return (
-        <div>
+        <PageWrapper title="question">
             <form action="/api/answer" method="POST">
                 <input type="hidden" name="questionId" value={id} />
                 <div className={styles.componentWrapper}>
@@ -27,6 +28,6 @@ export default async function About({params}: {params: Promise<{id: string}>}) {
                     <button type="submit">提交</button>
                 </div>
             </form>
-        </div>
+        </PageWrapper>
     );
 }
