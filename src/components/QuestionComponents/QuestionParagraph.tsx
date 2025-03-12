@@ -1,4 +1,5 @@
 import React, { memo, FC, CSSProperties } from 'react'
+import styles from './QuestionParagraph.module.scss'
 
 type PropsType = {
     text: string,
@@ -14,9 +15,9 @@ const QuestionParagraph: FC<PropsType> = memo(function QuestionParagraph({text, 
 
     // 换行
     const textList = text.split('\n')
-    
+
     return (
-        <p style={style}>
+        <p className={styles.para} style={style}>
             {textList.map((t,index) => {
                 return (
                     <span key={index}>
