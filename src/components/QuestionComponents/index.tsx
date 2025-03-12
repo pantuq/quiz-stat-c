@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import QuestionCheckbox from "./QuestionCheckbox"
 import QuestionInfo from "./QuestionInfo"
 import QuestionInput from "./QuestionInput"
 import QuestionParagraph from "./QuestionParagraph"
@@ -38,6 +39,10 @@ export const getComponent = (comp: ComponentInfoType) => {
 
     if(type === 'questionTextarea') {
         return <QuestionTextarea fe_id={fe_id} props={props}/>
+    }
+
+    if(type === 'questionCheckbox') {
+        return <QuestionCheckbox fe_id={fe_id} props={props}/>
     }
 
     return null

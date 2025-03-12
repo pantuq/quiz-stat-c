@@ -20,7 +20,10 @@ export async function POST(req: NextRequest) {
         
     }
     answerInfo.questionId = formData.get('questionId')
-    answerInfo.answerList = answerList   
+    answerInfo.answerList = answerList 
+    
+    console.log('answerInfo',answerInfo);
+    
 
     try{
         // 提交到服务端
